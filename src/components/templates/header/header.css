@@ -1,0 +1,4 @@
+.fondo_goku img {
+  max-width: 100%;
+  mask-image: linear-gradient(black 80%, transparent);
+}

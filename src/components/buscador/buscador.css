@@ -1,0 +1,36 @@
+/* --- Buscador ---*/
+.input-label {
+  font-weight: bold;
+}
+
+.input-search {
+  padding: 10px;
+  width: 500px;
+  border: 3px solid rgb(243, 0, 222);
+  border-radius: 1rem;
+  animation: buscar 5s infinite ease;
+}
+
+@media (max-width: 500px) {
+  .input-search {
+    width: 100%;
+  }
+}
+
+@keyframes buscar {
+  0% {
+    transform: translateY(0);
+    border: 3px solid rgb(243, 0, 222);
+  }
+
+  50% {
+    transform: translateY(-5px);
+    border: 3px solid rgb(144, 0, 255);
+  }
+
+  100% {
+    transform: translateY(0);
+    border: 3px solid rgb(243, 0, 222);
+  }
+}
+

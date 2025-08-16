@@ -1,0 +1,44 @@
+.btn_nuevo {
+  background: linear-gradient(rgb(107, 1, 255), rgb(225, 0, 255));
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 1px solid rgb(237, 234, 234);
+  border-radius: 20px;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+  animation: click 5s infinite ease;
+}
+
+@keyframes click {
+  0% {
+    transform: translateY(0);
+    border: 3px solid rgb(255, 255, 255);
+  }
+
+  50% {
+    transform: translateY(-5px);
+    border: 3px solid rgb(144, 0, 255);
+  }
+
+  100% {
+    transform: translateY(0);
+    border: 3px solid rgb(243, 243, 243);
+  }
+}
+
+.btn_nuevo:hover {
+  background: linear-gradient(45deg, rgb(225, 0, 255), rgb(107, 1, 255));
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+/* --- Pantallas responsivas*/
+@media (max-width: 500px) {
+  .btn_nuevo {
+    width: 100%;
+    padding: 5px;
+  }
+  
+}
+
+
