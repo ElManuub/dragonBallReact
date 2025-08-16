@@ -7,6 +7,10 @@ Esta es una aplicación hecha con **React** que consume una **API de Dragon Ball
 - [Vite] - npm create vite@latest.
 - [Dragon Ball API](https://github.com/ElManuub/DragonBallApi.git) - Fuente de datos.
 
+## Imagenes
+<img width="1901" height="777" alt="image" src="https://github.com/user-attachments/assets/55f32f38-31d8-4105-9501-913b640adba9" />
+
+
 ## ⚡ Características
 - Listado de personajes con imágenes.
 - Detalles individuales de cada personaje.
