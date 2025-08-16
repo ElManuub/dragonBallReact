@@ -4,7 +4,7 @@ Esta es una aplicación hecha con **React** que consume una **API de Dragon Ball
 
 ## 🚀 Tecnologías utilizadas
 - [React](https://reactjs.org/) - Biblioteca para construir la interfaz.
-- [Vite / Create React App] - (dependiendo de cómo la creaste).
+- [Vite] - npm create vite@latest.
 - [Dragon Ball API](https://github.com/ElManuub/DragonBallApi.git) - Fuente de datos.
 
 ## ⚡ Características
