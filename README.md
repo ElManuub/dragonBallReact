@@ -21,9 +21,8 @@ Esta es una aplicación hecha con **React** que consume una **API de Dragon Ball
    ```bash
    git clone https://github.com/tu-usuario/dragonBallReact.git
    cd dragonBallReact
-````
 
-2. Instala las dependencias:
+## 2. Instala las dependencias:
 
    ```bash
    npm install
