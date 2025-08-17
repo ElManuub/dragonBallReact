@@ -1,3 +1,4 @@
+import { useGlobalContext } from "../../context/globalContext";
 import { useFetch } from "../../hooks/useFetch";
 import './tarjetas.css'
 
@@ -16,11 +17,10 @@ interface ApiResponse {
   data: Character[];
 }
 
-interface Props {
-  query: string;
-}
 
-export function ApiPersonajes({query}: Props) {
+export function ApiPersonajes() {
+
+  const { value } = useGlobalContext(); //tomando el valor de mi context global
 
   const { data, loading, error } = useFetch<ApiResponse>(
     "http://127.0.0.1:8000/api/personajes"
@@ -32,9 +32,9 @@ export function ApiPersonajes({query}: Props) {
 
   const characters = data?.data || [];
 
-    // 🔎 Filtramos según query
+    // 🔎 Filtramos según mi valor global
   const filtered = characters.filter((item) =>
-    item.name.toLowerCase().includes(query.toLowerCase())
+    item.name.toLowerCase().includes(value.toLowerCase())
   );
 
   return (
@@ -58,7 +58,7 @@ export function ApiPersonajes({query}: Props) {
           </div>
         ))
       ) : (
-        <div>No se encontraron personajes.</div>
+        <div style={{ color: "white" }}>No se encontraron personajes.</div>
       )
       }
     </>

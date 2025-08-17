@@ -1,11 +1,10 @@
+import { useGlobalContext } from "../../context/globalContext";
 import "./buscador.css";
 
-interface SearchProps {
-  query: string;
-  setQuery: (query: string) => void;
-}
+export const Search = () => {
 
-export const Search = ({ query, setQuery }: SearchProps) => {
+  const { value,setValue } = useGlobalContext();//mi contexto global
+
   return (
     <>
       <label 
@@ -19,8 +18,8 @@ export const Search = ({ query, setQuery }: SearchProps) => {
         type="search"
         className="input-search"
         id="input-search"
-        value={query}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
+        value={value}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
       />
     </>
   );

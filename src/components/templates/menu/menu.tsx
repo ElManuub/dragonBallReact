@@ -2,10 +2,11 @@ import "./menu.css";
 import { ApiPersonajes } from "../../tarjetas/apiPersonajes";
 import { Search } from "../../buscador/buscador";
 import { Boton } from "../../boton/boton";
-import { useState } from "react";
+// import { useContext } from "react";
+// import { manuubContext } from "../../../App";
 
 export function Menu() {
-  const [query, setQuery] = useState("");
+
   return (
     <div className="menu">
       
@@ -14,11 +15,11 @@ export function Menu() {
           <Boton>Nuevo Personaje</Boton>
           <Boton>Eliminar Personaje</Boton>
         </div>
-        <Search query={query} setQuery={setQuery} />
+        <Search />
       </div>
 
       <section className="characters">
-        <ApiPersonajes query={query} />
+        <ApiPersonajes />
       </section>
 
     </div>
