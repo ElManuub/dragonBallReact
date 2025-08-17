@@ -1,69 +1,44 @@
-# React + TypeScript + Vite
+# 🐉 Dragon Ball React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación hecha con **React** que consume una **API de Dragon Ball** para mostrar personajes y su información.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías utilizadas
+- [React](https://reactjs.org/) - Biblioteca para construir la interfaz.
+- [Vite] - npm create vite@latest.
+- [Dragon Ball API](https://github.com/ElManuub/DragonBallApi.git) - Fuente de datos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Imagenes
+<img width="1901" height="777" alt="image" src="https://github.com/user-attachments/assets/55f32f38-31d8-4105-9501-913b640adba9" />
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚡ Características
+- Listado de personajes con imágenes.
+- Detalles individuales de cada personaje.
+- Búsqueda de personajes.
+- Diseño responsive.
+- Creacion de nuevos personajes
+- editar personajes
+- eliminar personajes
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Instalación y uso
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/dragonBallReact.git
+   cd dragonBallReact
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 2. Instala las dependencias:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```bash
+   npm install
+   ```
+3. Ejecuta la aplicación:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   ```bash
+   npm run dev
+   ```
+4. Abre en tu navegador:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```
+   http://localhost:5173
+   ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
